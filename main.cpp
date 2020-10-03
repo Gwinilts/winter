@@ -135,7 +135,7 @@ call syntax:
 int _err_syntax() {
   cout << "Invalid calling syntax!" << endl << "Try:" << endl
   << NAME << " server [name]" << endl
-  << NAME << " client" << endl;
+  << NAME << " client [name]" << endl;
 
   return 1;
 }
