@@ -20,6 +20,24 @@ Usage:
 
 This program will only work on the LAN
 
+# Notes
+
+There is almost no concept of security here and it's very easy to make the client and server crash, read out of bounds and generally misbehave.
+
+
+The program is agnostic of your ip address. We don't even need to record where msgs are coming from.
+
+
+This could be developed to allow players from different networks to play with each other.
+  - It would need a well-known server
+  - a client on one net registers with server
+  - a client on other net registers with server
+  - they're friends so they swap exchange public ips using server
+  - they msg each-other a few times, ignoring the content
+  - one net is host net, the other is client net
+  - all traffic of this program from client net is then sent to host net
+  - all traffic from host net that didn't originate from client net is sent to client net
+
 # Protocol
 
 The maximum msg size is 2048.
