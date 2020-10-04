@@ -637,11 +637,11 @@ class Client {
     cout << to_string(x) << ", " << to_string(y) << " =======";
 */
 
+    _zx = x + 1;
+    _zy = 30 - y;
+
     x = 5 + (x * 2);
     y = 2 + (30 - y);
-
-    _zx = x;
-    _zy = y;
 /*
     setPos(0, 39);
     cout << to_string(x) << ", " << to_string(y) << "      ";*/
